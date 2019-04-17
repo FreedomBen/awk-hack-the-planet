@@ -154,11 +154,19 @@ def wage
 end
 
 def hours
-  "#{Random.rand(20..60)}".to_i
+  "#{Random.rand(20..50)}".to_i
 end
 
 def office
-
+  %w[
+    Lehi
+    MountainView
+    Seattle
+    Raleigh
+    NewYork
+    Concord
+    Manchester
+  ].shuffle.first
 end
 
 def title
@@ -199,10 +207,10 @@ end
 def constants
   [
     line("Linus Torvalds", "1599.01", "40", "Lehi", "CEO", "1993/04/16"),
-    line("Homer Simpson", "15.12", "33", "Lehi", "NuclearPower", "1993/04/16"),
+    line("Homer Simpson", "15.12", "33", "Springfield", "NuclearPower", "1993/04/16"),
     line("Sergey Brin", "1299", "40", "MountainView", "COO", "1993/04/16"),
     line("Larry Page", "1299", "40", "MountainView", "VPEng", "1993/04/16"),
-    line("Benjamin Porter", "678", "40", "Lehi", "CEO", "1993/04/16"),
+    line("Benjamin Porter", "678", "40", "Lehi", "Janitor", "1993/04/16"),
   ]
 end
 
@@ -210,7 +218,7 @@ def line(nam, wag, hour, offic, titl, start_dat)
   "#{nam.split(' ')[0]}\t#{nam.split(' ')[1]}\t#{wag}\t#{hour}\t#{offic}\t#{titl}\t#{start_dat}"
 end
 
-File.open('employees.tsv', 'w') do |file|
+File.open('payroll.tsv', 'w') do |file|
   file.write("FirstName\tLastName\tHourlyWage\tHoursWorked\tOffice\tTitle\tStartDate\n")
   file.write(
     names \
