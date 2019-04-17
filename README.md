@@ -5,7 +5,7 @@ Source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
 ## Challenges
 
 1. What is the name of the CEO?  Format like "lastName, FirstName"?
-2. How much money per hour does?
+2. How much money per hour does the janitor make?
 3. Which employees were hired on April 16, 1993? (Print the list)
 4. Who is the highest paid employee?
 5. How many mechanical engineers work here?
@@ -17,3 +17,5 @@ Source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
 11. Are there any employees with identical first & last names?
 12. What is the average wage?
 13. Print each column header, along with which column it is.  E.g. The LastName column is the second column, so print "2 - LastName"
+14. How much money per hour does the Seattle office cost?
+15. How many engineers (of any type) work here?
