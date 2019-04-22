@@ -20,3 +20,4 @@ Source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
 14. How much money per hour does the Seattle office cost?
 15. How many engineers (of any type) work here?
 16. Are there any duplicate entries? (Same names appear more than once)
+17. Anonymize the data by removing the first two columns.  Print all remaining columns
