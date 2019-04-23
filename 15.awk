@@ -1,4 +1,4 @@
-# Use variable to count each occurrence of mechanical engineer
+# Use variable to count each occurrence of any engineer
 
 BEGIN           { count = 0 }
 $6 ~ /Engineer/ { count += 1 }
