@@ -2,6 +2,17 @@
 
 Source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
 
+NOTE:  For those interested in the recording of the talk, I was informed that because it was a "tutorial" talk it was not recorded.
+
+I am planning to record the talk and put it on YouTube myself, and I will link to it here.  I hope to have this done within the next few days :-) 
+
+If you want to contact me:
+
+Emamil:  FreedomBen@protonmail.com
+Keybase.io :  https://keybase.io/freedomben
+Twitter:  @Freedom_Ben
+
+
 ## Challenges
 
 1. What is the name of the CEO?  Format like "lastName, FirstName"?
