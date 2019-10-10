@@ -58,3 +58,9 @@ Some solutions are bash scripts, in which case just run them like normal:
 15. How many engineers (of any type) work here?
 16. Are there any duplicate entries? (Same names appear more than once)
 17. Anonymize the data by removing the first two columns.  Print all remaining columns
+
+## Solutions
+
+My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.
+They are also detailed in the [Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
+at the end of the deck.
