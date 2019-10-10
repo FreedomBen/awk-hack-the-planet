@@ -1,6 +1,7 @@
 # Awk:  Hack the Planet['s text]!
 
-Source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
+[Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
+and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
 
 NOTE:  For those interested in the recording of the talk, I was informed that because it was a "tutorial" talk it was not recorded.
 
