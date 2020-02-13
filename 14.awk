@@ -1,3 +1,10 @@
-BEGIN          { sum = 0 }
-$5 ~ /Seattle/ { sum += $3 }
-END            { printf("The Seattle office costs %.2f per hour\n", sum) }
+#!/usr/bin/awk -f
+
+{
+    for (i = 3; i <= NF; i++) {
+        #printf FS$i
+        printf "%s\t", $i
+    }
+    print NL
+}
+

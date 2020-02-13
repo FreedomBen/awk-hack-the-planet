@@ -1,4 +1,3 @@
-/^FirstName/ {
-    for (i=1; i<8; i++)
-        printf "%d - %s\n", i, $i
-}
+BEGIN           { count = 0 }
+$6 ~ /Engineer/ { count += 1 }
+END             { print count }
