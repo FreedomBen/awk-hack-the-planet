@@ -1,3 +1,10 @@
-BEGIN           { count = 0 }
-$6 ~ /Engineer/ { count += 1 }
-END             { print count }
+#!/usr/bin/awk -f
+
+{
+    for (i = 3; i <= NF; i++) {
+        #printf FS$i
+        printf "%s\t", $i
+    }
+    print NL
+}
+

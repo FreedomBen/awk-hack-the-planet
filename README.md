@@ -1,11 +1,7 @@
 # Awk:  Hack the Planet['s text]!
 
 [Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
-and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2019
-
-NOTE:  For those interested in the recording of the talk, I was informed that because it was a "tutorial" talk it was not recorded.
-
-I am planning to record the talk and put it on YouTube myself, and I will link to it here.  I was just suitably chastised for my slacking and will try to get this done soon.
+and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2020
 
 If you want to contact me:
 
@@ -41,23 +37,34 @@ Some solutions are bash scripts, in which case just run them like normal:
 
 ## Challenges
 
-1. What is the name of the CEO?  Format like "LastName, FirstName"?
-2. How much money per hour does the janitor make?
+### Easy (one-liners)
+1. How much money per hour does the janitor make?
+2. What is the name of the CEO?  Format like "LastName, FirstName"?
 3. Which employees were hired on April 16, 1993? (Print the list)
-4. Who is the highest paid employee?
+4. Which employee works in the Springfield office?
+
+### A little harder
 5. How many mechanical engineers work here?
-6. Who worked the most hours this week?
-7. Who was the first employee hired?
-8. Which employee works in the Springfield office?
-9. How many different office locations does the company have?
-10. How many people from the Portwood family work here?
-11. Are there any employees with identical first & last names?
-12. What is the average wage?
-13. Print each column header, along with which column it is.  E.g. The LastName column is the second column, so print "2 - LastName"
-14. How much money per hour does the Seattle office cost?
-15. How many engineers (of any type) work here?
-16. Are there any duplicate entries? (Same names appear more than once)
-17. Anonymize the data by removing the first two columns.  Print all remaining columns
+6. How many people from the Portwood family work here?
+7. Are there any employees with identical first & last names?
+
+### Gotta think a bit
+8. Print each column header, along with which column it is.  E.g. The LastName column is the second column, so print "2 - LastName"
+9. How much money per hour does the Seattle office cost?
+10. How many engineers (of any type) work here?
+11. Who is the highest paid employee?
+12. Who worked the most hours this week?
+
+### Awk proficient
+13. Anonymize the data by removing the first two columns.  Print all remaining columns
+14. Our client is complaining about the anonymized data before.  It is too hard to read.  They would like you to add line numbers to the output.
+15. How many different office locations does the company have?
+16. What is the average wage?
+17. Are there any duplicate entries? (Same names appear more than once)
+18. Who was the first employee hired?
+
+
+
 
 ## Solutions
 

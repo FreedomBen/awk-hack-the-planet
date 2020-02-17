@@ -1,15 +1,5 @@
-BEGIN {
-    highest = 0
-    name = ""
-}
-
-$0 !~ /HourlyWage/ {
-    if ($3 > highest) {
-        highest = $3
-        name = sprintf("%s %s", $1, $2)
-    }
-}
-
-END {
-    printf "Highest paid person is %s who makes $%.2f/hour\n", name, highest
+BEGIN    { count = 0 }
+$1 == $2 { count += 1 }
+END      {
+    printf("There are %d people with identical first and last names\n", (count > 0) ? count : "no")
 }
