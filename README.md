@@ -23,7 +23,7 @@ when it makes sense.   Don’t use grep or sed tho since awk can handle the same
 The payroll file is `payroll.tsv`.  You can generate a new one with the provided ruby script
 if you’d like to randomize it.
 
-There are many different solutions.  The ones presented are just mine.  Many of them could be optimized and refactored to be more elegant.  To run my solutions, use (but substitute the number for the one you are trying to run):
+There are many different solutions.  The ones presented are just mine.  Many of them could be optimized and refactored to be more elegant.  To run my solutions (and check my output against yours), use `awk -f <file> payroll.tsv` (but substitute the number for the one you are trying to run):
 
 ```bash
 awk -f 01.awk payroll.tsv
@@ -35,7 +35,7 @@ Some solutions are bash scripts, in which case just run them like normal:
 ./09-awk.sh
 ```
 
-## Challenges
+## Challenges (Questions to answer about our payroll data using awk to analyze)
 
 ### Easy (one-liners)
 1. How much money per hour does the janitor make?
@@ -68,6 +68,11 @@ Some solutions are bash scripts, in which case just run them like normal:
 
 ## Solutions
 
-My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.
+My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.  You will run them with:
+
+```bash
+awk -f <file>.awk payroll.tsv
+```
+
 They are also detailed in the [Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
 at the end of the deck.
