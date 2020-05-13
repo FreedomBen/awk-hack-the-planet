@@ -3,7 +3,12 @@
 [Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
 and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2020
 
-If you want to contact me:
+## Videos from Linux Fest Northwest 2020:
+
+* [Part 1 (Presentation)](https://youtu.be/43BNFcOdBlY) - This is the presentation or lecture explaining Awk syntax and functions
+* [Part 2 (Exercises)](https://youtu.be/4UGLsRYDfo8) - This includes me explaining all of the answers to the challenges in the repo
+
+## If you want to contact me:
 
 Email:  FreedomBen@protonmail.com
 Keybase.io :  https://keybase.io/freedomben
