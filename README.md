@@ -10,9 +10,9 @@ and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2
 
 ## If you want to contact me:
 
-Email:  FreedomBen@protonmail.com
-Keybase.io :  https://keybase.io/freedomben
-Twitter:  @Freedom_Ben
+* Email:  FreedomBen@protonmail.com
+* Keybase.io :  https://keybase.io/freedomben
+* Twitter:  @Freedom_Ben
 
 
 ## The Scenario
