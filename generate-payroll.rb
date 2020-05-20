@@ -181,9 +181,9 @@ end
 def names
   retval = []
   first_names.each do |fname|
-    last_names.each {
-      |lname| retval.push("#{fname} #{lname}")
-    }
+    last_names.each do |lname|
+      retval.push("#{fname} #{lname}")
+    end
   end
   retval
 end
