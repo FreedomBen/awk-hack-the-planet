@@ -214,6 +214,8 @@ def constants
   ]
 end
 
+# These argument names look like typos and drive me kind of crazy, but they aren't typos.
+# They are to avoid name collision with the functions defined above
 def line(nam, wag, hour, offic, titl, start_dat)
   "#{nam.split(' ')[0]}\t#{nam.split(' ')[1]}\t#{wag}\t#{hour}\t#{offic}\t#{titl}\t#{start_dat}"
 end
@@ -221,10 +223,10 @@ end
 File.open('payroll.tsv', 'w') do |file|
   file.write("FirstName\tLastName\tHourlyWage\tHoursWorked\tOffice\tTitle\tStartDate\n")
   file.write(
-    names \
-      .map { |emp| line(emp, wage, hours, office, title, start_date) } \
+    names
+      .map { |emp| line(emp, wage, hours, office, title, start_date) }
       .concat(constants)
-      .shuffle \
+      .shuffle
       .join("\n")
   )
 end

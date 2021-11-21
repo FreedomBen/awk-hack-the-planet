@@ -72,7 +72,7 @@ Some solutions are bash scripts, in which case just run them like normal:
 
 ## Solutions
 
-My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.  You will run them with:
+My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.  You can run them with:
 
 ```bash
 awk -f <file>.awk payroll.tsv
