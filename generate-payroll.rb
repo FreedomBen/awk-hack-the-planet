@@ -42,7 +42,7 @@ def first_names
     Poppy
     Ella
     Lily
-    Byron Oba  
+    Byron
     Leonard
     Alberta
     Hilary
