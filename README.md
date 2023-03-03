@@ -1,9 +1,37 @@
 # Awk:  Hack the Planet['s text]!
 
-[Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
-and source code to go along with Ben Porter's Awk talk at Linux Fest Northwest 2020
+[Slides (2023 update)](https://github.com/FreedomBen/awk-hack-the-planet/raw/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D%20-%202023%20Update.pdf)
+and source code to go along with Ben Porter's "Awk: Hack the planet['s text]!" video.  (This started out as a talk at Linux Fest Northwest in 2019 and 2020)
 
-## Videos from Linux Fest Northwest 2020:
+[Slides from previous (2020) version](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
+
+## Videos
+
+* [Part 1 (Presentation) (2023 Update)](https://youtu.be/E5aQxIdjT0M) - This is the presentation or lecture explaining Awk syntax and functions
+* [Part 2 (Exercises)](https://youtu.be/4UGLsRYDfo8) - This includes me explaining all of the answers to the challenges in the repo.  Contains spoilers for the challenges!
+
+### About Awk: Hack the Planet['s text]!
+
+Ready to learn Awk?  This is the video!  An hour from now, you'll be able to read and write moderately complex Awk scripts!
+
+Awk: Hack the Planet['s text]! - Part 1:  The Presentation
+
+Ready to take on the challenges?  Head to Part 2: https://youtu.be/4UGLsRYDfo8
+
+Awk has been around almost forever, yet so many today are unaware of it's power and elegance. It is an amazingly powerful tool that is it's own Turing complete programming language. Awk is so powerful that it can be used to create entire services (that process text). But, there's a lot of ignorance out there regarding Awk, and ignorance breeds fear. Come take the Awk red pill like that guy in the documentary "The Matrix" did. Awk can be a ton of fun! Let's make text processing fun again!
+
+We start out by discussing what Awk is, and briefly reviewing the history of Awk. We'll then go over some examples of cool things we can do to whet our appetites. Then we'll go over the syntax and rules of the Awk language. Then we'll see real examples of Awk in action by doing some amazing text processing using only Awk. 
+
+Throughout the process, there will be lots of examples that you can run and test yourself (if you want to). Some text files will be provided so you can quickly and easily reproduce the results locally in real time. Source code is available on github:  https://github.com/FreedomBen/awk-hack-the-planet .
+
+By the end of this presentation, you will be ready to start using Awk to solve real world problems. You will be comfortable reading and understanding Awk programs and will be ready to slice and dice like a classic *nix hacker.
+
+When you are ready to take on the challenges, you can find the source at: https://github.com/FreedomBen/awk-hack-the-planet
+
+You can also watch my solutions (with in depth explanations) in Part 2:  https://youtu.be/4UGLsRYDfo8
+
+
+## Original Videos from Linux Fest Northwest 2020:
 
 * [Part 1 (Presentation)](https://youtu.be/43BNFcOdBlY) - This is the presentation or lecture explaining Awk syntax and functions
 * [Part 2 (Exercises)](https://youtu.be/4UGLsRYDfo8) - This includes me explaining all of the answers to the challenges in the repo
@@ -78,5 +106,5 @@ My solutions are in the `*.awk` files in this repository.  Feel free to use them
 awk -f <file>.awk payroll.tsv
 ```
 
-They are also detailed in the [Slides](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D.pdf)
+They are also detailed in the [Slides](https://github.com/FreedomBen/awk-hack-the-planet/raw/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D%20-%202023%20Update.pdf)
 at the end of the deck.
