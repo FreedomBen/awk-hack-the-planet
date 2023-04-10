@@ -1,30 +1,50 @@
 # Awk:  Hack the Planet['s text]!
 
-This is a free "course" on Awk.  It originally started out as a talk at Linux Fest Northwest that was repeated due to popularity (apologies still to those who weren't able to attend because the room was full), but has moved to a video series.  This Github repo contains the "challenges" portion of the course, where you write Awk code to answer a question.
+This is a free "course" on Awk.  It originally started out as a talk at Linux Fest
+Northwest that was repeated due to popularity (apologies still to those who weren't
+able to attend because the room was full), but has moved to a video series.  This
+Github repo contains the "challenges" portion of the course, where you write Awk
+code to answer a question.
 
-If you just got here, start with the [Part 1 video](https://youtu.be/E5aQxIdjT0M), then either take on the challenges here or [watch Part 2](https://youtu.be/4UGLsRYDfo8) to see how I solved them.  The challenges can be challenging (terrible pun intended), but you'll get a lot more out of this if you do the challenges!
 
 ## About Awk: Hack the Planet['s text]!
 
-Ready to learn Awk?  This is the place!  An hour from now, you'll be able to read and write moderately complex Awk scripts!
+Ready to learn Awk?  This is the place!  An hour or two from now, you'll be able
+to read and write moderately complex Awk scripts!
 
-Progression (recommended to be done in this order):
+### Course Progression (recommended order):
 
 1.  Watch video:  [Awk: Hack the Planet['s text]! - Part 1](https://youtu.be/E5aQxIdjT0M)
 2.  Attempt the challenges:  [See "The Challenges" section on README.md in Github](https://github.com/FreedomBen/awk-hack-the-planet#the-challenges)
 3.  Watch solution video:  [Awk: Hack the Planet['s text]! - Part 2](https://youtu.be/4UGLsRYDfo8)
 
-Note:  If you click on the \*.awk files in the repo, you'll be seeing my solution!  To avoid spoilers, make sure to follow "The Challenges" section below.  It will describe the scenario and then provide the questions.
+Note:  If you click on the \*.awk files in the repo, you'll be seeing my solution!
+To avoid spoilers, make sure to follow "The Challenges" section below.  It will
+describe the scenario and then provide the questions.
 
 ### Course Description
 
-Awk has been around almost forever, yet so many today are unaware of it's power and elegance. It is an amazingly powerful tool that is its own Turing complete programming language. Awk is so powerful that it can be used to create entire services (that process text). But, there's a lot of ignorance out there regarding Awk, and ignorance breeds fear. Come take the Awk red pill like that guy in the documentary "The Matrix" did. Awk can be a ton of fun! Let's make text processing fun again!
+Awk has been around almost forever, yet so many today are unaware of it's power
+and elegance. It is an amazingly powerful tool that is its own Turing complete
+programming language. Awk is so powerful that it can be used to create entire
+services (that process text). But, there's a lot of ignorance out there regarding
+Awk, and ignorance breeds fear. Come take the Awk red pill like that guy in the
+documentary "The Matrix" did. Awk can be a ton of fun! Let's make text processing
+fun again!
 
-We start out by discussing what Awk is, and briefly reviewing the history of Awk. We'll then go over some examples of cool things we can do to whet our appetites. Then we'll go over the syntax and rules of the Awk language. Then we'll see real examples of Awk in action by doing some amazing text processing using only Awk.
+We start out by discussing what Awk is, and briefly reviewing the history of Awk.
+We'll then go over some examples of cool things we can do to whet our appetites.
+Then we'll go over the syntax and rules of the Awk language. Then we'll see real
+examples of Awk in action by doing some amazing text processing using only Awk.
 
-Throughout the process, there will be lots of examples that you can run and test yourself (if you want to). Some text files will be provided so you can quickly and easily reproduce the results locally in real time. Source code is available on github:  https://github.com/FreedomBen/awk-hack-the-planet .
+Throughout the process, there will be lots of examples that you can run and test
+yourself (if you want to). Some text files will be provided so you can quickly and
+easily reproduce the results locally in real time. Source code is available on
+github:  https://github.com/FreedomBen/awk-hack-the-planet .
 
-By the end of this presentation, you will be ready to start using Awk to solve real world problems. You will be comfortable reading and understanding Awk programs and will be ready to slice and dice like a classic \*nix hacker.
+By the end of this presentation, you will be ready to start using Awk to solve real
+world problems. You will be comfortable reading and understanding Awk programs and
+will be ready to slice and dice like a classic \*nix hacker.
 
 When you are ready to take on the challenges, you can find the source at: https://github.com/FreedomBen/awk-hack-the-planet
 
@@ -74,7 +94,10 @@ when it makes sense.   Don’t use grep or sed tho since awk can handle the same
 The payroll file is `payroll.tsv`.  You can generate a new one with the provided ruby script
 if you’d like to randomize it.
 
-There are many different solutions.  The ones presented are just mine.  Many of them could be optimized and refactored to be more elegant.  To run my solutions (and check my output against yours), use `awk -f <file> payroll.tsv` (but substitute the number for the one you are trying to run):
+There are many different solutions.  The ones presented are just mine.  Many of them could be
+optimized and refactored to be more elegant.  To run my solutions (and check my output against
+yours), use `awk -f <file> payroll.tsv` (but substitute the number for the one you are trying
+to run):
 
 ```bash
 awk -f 01.awk payroll.tsv
