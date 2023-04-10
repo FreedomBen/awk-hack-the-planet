@@ -1,7 +1,6 @@
 # Awk:  Hack the Planet['s text]!
 
-This is a free "course" on Awk.  It originally started out as a talk at Linux Fest Northwest that was repeated due to popularity (apologies still to those who weren't able to attend because the room was full), but has moved to a video
-series.
+This is a free "course" on Awk.  It originally started out as a talk at Linux Fest Northwest that was repeated due to popularity (apologies still to those who weren't able to attend because the room was full), but has moved to a video series.  This Github repo contains the "challenges" portion of the course, where you write Awk code to answer a question.
 
 If you just got here, start with the [Part 1 video](https://youtu.be/E5aQxIdjT0M), then either take on the challenges here or [watch Part 2](https://youtu.be/4UGLsRYDfo8) to see how I solved them.  The challenges can be challenging (terrible pun intended), but you'll get a lot more out of this if you do the challenges!
 
