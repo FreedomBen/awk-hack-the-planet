@@ -15,12 +15,12 @@ to read and write moderately complex Awk scripts!
 ### Course Progression (recommended order):
 
 1.  Watch video:  [Awk: Hack the Planet['s text]! - Part 1](https://youtu.be/E5aQxIdjT0M)
-2.  Attempt the challenges:  [See "The Challenges" section on README.md in Github](https://github.com/FreedomBen/awk-hack-the-planet#the-challenges)
+2.  Attempt the challenges\*:  [See "The Challenges" section on README.md in Github](https://github.com/FreedomBen/awk-hack-the-planet#the-challenges)
 3.  Watch solution video:  [Awk: Hack the Planet['s text]! - Part 2](https://youtu.be/4UGLsRYDfo8)
 
-Note:  If you click on the \*.awk files in the repo, you'll be seeing my solution!
+\*_Note:  If you click on the \*.awk files in the repo, you'll be seeing my solution!
 To avoid spoilers, make sure to follow "The Challenges" section below.  It will
-describe the scenario and then provide the questions.
+describe the scenario and then provide the questions._
 
 ### Course Description
 
