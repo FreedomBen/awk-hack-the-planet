@@ -83,31 +83,52 @@ and source code to go along with Ben Porter's "Awk: Hack the planet['s text]!" v
 
 ### The Scenario
 
-The boss has given us a tsv file full of payroll data, and she would like us to run some
-analysis on it.  We recently learned about `awk` and it's amazing processing power,
-and have decided this is an awesome chance to use our new skillz!
+The boss has given us [a tsv file full of payroll data](https://github.com/FreedomBen/awk-hack-the-planet/blob/master/payroll.tsv),
+and she would like us to run some analysis on it.  We recently learned about `awk` and
+its amazing processing power, and have decided this is an awesome chance to use our new skillz!
 
 You should primarily use awk, but you can (and should) combine with other tools (like sort, uniq)
 when it makes sense.   Don’t use grep or sed tho since awk can handle the same scenarios
 (and you are trying to learn awk after all) :-)
 
-The payroll file is `payroll.tsv`.  You can generate a new one with the provided ruby script
-if you’d like to randomize it.
+To begin you can either clone this repo (recommended):
+
+```bash
+git clone https://github.com/FreedomBen/awk-hack-the-planet.git
+```
+
+or directly download the [payroll.tsv](https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/payroll.tsv) file:
+
+```bash
+wget 'https://raw.githubusercontent.com/FreedomBen/awk-hack-the-planet/master/payroll.tsv'
+```
+
+The payroll file is `[payroll.tsv](https://github.com/FreedomBen/awk-hack-the-planet/blob/master/payroll.tsv)`.  If you would like to randomize it, you can generate a new one with the provided ruby script:
+
+```bash
+# This script will write to a file "payroll.rsv" in the working directory
+./generate-payroll.rb
+```
 
 There are many different solutions.  The ones presented are just mine.  Many of them could be
-optimized and refactored to be more elegant.  To run my solutions (and check my output against
-yours), use `awk -f <file> payroll.tsv` (but substitute the number for the one you are trying
-to run):
+optimized and refactored to be more elegant, but my goal was simplicity, readability, and ease
+of learning.  To run my solutions (and check my output against yours), use
+`awk -f <file> payroll.tsv` (but substitute the number for the one you are trying
+to run).  For example, to run my solution for problem 1:
 
 ```bash
 awk -f 01.awk payroll.tsv
 ```
 
-Some solutions are bash scripts, in which case just run them like normal:
+Some solutions are bash scripts (you can tell by the file extension .sh), in which case just
+run them like normal:
 
 ```bash
 ./09-awk.sh
 ```
+
+Best of luck!
+
 
 ### Challenges (Questions to answer about our payroll data using awk to analyze)
 
@@ -138,7 +159,6 @@ Some solutions are bash scripts, in which case just run them like normal:
 18. Who was the first employee hired?
 
 
-
 ### Solutions
 
 My solutions are in the `*.awk` files in this repository.  Feel free to use them for hints.  You can run them with:
@@ -149,3 +169,21 @@ awk -f <file>.awk payroll.tsv
 
 They are also detailed in the [Slides](https://github.com/FreedomBen/awk-hack-the-planet/raw/master/Slides%20for%20Awk-%20Hack%20the%20planet%5B's%20text%5D%20-%202023%20Update.pdf)
 at the end of the deck.
+
+
+### If you need some discouragement or demotivation and/or want to learn an extra tidbit:
+
+[Good news everyone!](https://www.youtube.com/watch?v=PbVFDXQsv0Y)  The boss just sent me another
+message, and she says that if you get these questions solved then you'll get a huge raise!
+10x higher than what she's paying you right now.  Only, the computer is broken so you have to
+use awk to calculate it.  This is an opportunity to explore a cool feature of the awk CLI!
+We can pre-set variables and pass them in.  There are other cool flags too.  Check out `awk --help`.
+But note that only the POSIX options are portable, so avoid the GNU options if you need compatibility.
+
+To calculate your new salary, update the `CURRENT_SALARY` variable below to what she is paying you
+now.  Here's mine:
+
+```bash
+awk -v CURRENT_SALARY=0 'BEGIN { print "Your new salary is: " 10 * CURRENT_SALARY }'
+```
+
