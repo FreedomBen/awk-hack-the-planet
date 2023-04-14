@@ -1,17 +1,4 @@
-function getName(first, last) {
-    return sprintf("%s %s", $1, $2)
-}
+#!/usr/bin/awk -f
 
-BEGIN {
-    sum = 0
-    count = 0
-}
-
-$0 !~ /HourlyWage/ {
-    sum += $3
-    count += 1
-}
-
-END {
-    printf("The average wage is %.2f per hour\n", sum / count)
-}
+NR>1 {S+=$3}
+END {print S/(NR-1)}
