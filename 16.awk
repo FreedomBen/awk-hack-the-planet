@@ -1,7 +1,3 @@
-function getName(first, last) {
-    return sprintf("%s %s", $1, $2)
-}
-
 BEGIN {
     sum = 0
     count = 0
