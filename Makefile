@@ -6,7 +6,7 @@ define run_challenge
 $(if $(filter 15,$(1)),bash 15-awk.sh,awk -f $(1).awk $(DATA))
 endef
 
-.PHONY: test test-server update-expected $(addprefix test-,$(CHALLENGES))
+.PHONY: test test-server update-expected quiz $(addprefix test-,$(CHALLENGES))
 
 test:
 	@pass=0; fail=0; failures=""; \
@@ -126,3 +126,6 @@ update-expected:
 		fi; \
 	done
 	@echo "Done. All expected output files updated."
+
+quiz:
+	@bash quiz.sh
