@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run challenge tests
+        run: make test
+
+      - name: Run server tests
+        run: make test-server
