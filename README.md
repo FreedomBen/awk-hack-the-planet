@@ -171,6 +171,27 @@ They are also detailed in the [Slides](https://github.com/FreedomBen/awk-hack-th
 at the end of the deck.
 
 
+### Checking Your Answers
+
+A test harness is included so you can verify your solutions against expected output.  Run all tests with:
+
+```bash
+make test
+```
+
+To run a single test (e.g. challenge 5):
+
+```bash
+make test-05
+```
+
+If you regenerate `payroll.tsv` with `generate-payroll.rb`, update the expected output to match:
+
+```bash
+make update-expected
+```
+
+
 ### If you need some discouragement or demotivation and/or want to learn an extra tidbit:
 
 [Good news everyone!](https://www.youtube.com/watch?v=PbVFDXQsv0Y)  The boss just sent me another
