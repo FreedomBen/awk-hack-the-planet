@@ -1,5 +1,5 @@
 function getName(first, last) {
-    return sprintf("%s %s", $1, $2)
+    return sprintf("%s %s", first, last)
 }
 
 BEGIN {
