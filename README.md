@@ -192,6 +192,36 @@ make update-expected
 ```
 
 
+### Interactive Quiz Mode (Experimental)
+
+There is also an interactive quiz mode that presents each challenge one at a time, accepts your AWK code, and checks it against the expected output.  Launch it with:
+
+```bash
+make quiz
+```
+
+or directly
+
+```bash
+./quiz.sh
+```
+
+The quiz will show you a data preview, then walk you through each challenge in order.  Type your AWK code (blank line to submit), and it will tell you if your answer is correct.  Your progress is saved automatically so you can pick up where you left off.
+
+Available commands during the quiz:
+
+| Command | Description |
+|---------|-------------|
+| `help` | List available commands |
+| `skip` | Skip to the next challenge |
+| `hint` | Show the expected output |
+| `reveal` | Show the reference solution source |
+| `1`–`18` | Jump to a specific challenge |
+| `quit` / `q` | Save progress and exit |
+
+Note: This feature is experimental and might have bugs.  If you run into issues, you can always fall back to running the solutions manually and checking with `make test`.
+
+
 ### If you need some discouragement or demotivation and/or want to learn an extra tidbit:
 
 [Good news everyone!](https://www.youtube.com/watch?v=PbVFDXQsv0Y)  The boss just sent me another
