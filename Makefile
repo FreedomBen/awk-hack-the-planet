@@ -6,7 +6,7 @@ define run_challenge
 $(if $(filter 15,$(1)),bash 15-awk.sh,awk -f $(1).awk $(DATA))
 endef
 
-.PHONY: test update-expected $(addprefix test-,$(CHALLENGES))
+.PHONY: test test-server update-expected $(addprefix test-,$(CHALLENGES))
 
 test:
 	@pass=0; fail=0; failures=""; \
@@ -38,6 +38,59 @@ test:
 		echo "Failures:$$failures"; \
 		exit 1; \
 	fi
+
+test-server:
+	@pass=0; fail=0; \
+	./server.sh 18080 & SERVER_PID=$$!; \
+	trap "kill $$SERVER_PID 2>/dev/null; wait $$SERVER_PID 2>/dev/null" EXIT; \
+	ready=0; \
+	for i in 1 2 3 4 5 6 7 8 9 10; do \
+		if curl -s -o /dev/null http://localhost:18080/ 2>/dev/null; then \
+			ready=1; break; \
+		fi; \
+		sleep 0.5; \
+	done; \
+	if [ "$$ready" -ne 1 ]; then \
+		echo "FAIL: server did not start within 5 seconds"; \
+		exit 1; \
+	fi; \
+	if curl -s http://localhost:18080/ | grep -q "Payroll API"; then \
+		echo "PASS / (HTML index)"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL / (HTML index)"; fail=$$((fail + 1)); \
+	fi; \
+	count=$$(curl -s http://localhost:18080/api/employees | grep -o '"firstName"' | wc -l); \
+	if [ "$$count" -eq 4513 ]; then \
+		echo "PASS /api/employees ($$count records)"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL /api/employees (expected 4513, got $$count)"; fail=$$((fail + 1)); \
+	fi; \
+	if curl -s http://localhost:18080/api/offices | grep -q '"Springfield"'; then \
+		echo "PASS /api/offices"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL /api/offices"; fail=$$((fail + 1)); \
+	fi; \
+	if curl -s http://localhost:18080/api/stats | grep -q '"totalEmployees":4513'; then \
+		echo "PASS /api/stats"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL /api/stats"; fail=$$((fail + 1)); \
+	fi; \
+	if curl -s http://localhost:18080/api/info | grep -q '"pid"'; then \
+		echo "PASS /api/info"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL /api/info"; fail=$$((fail + 1)); \
+	fi; \
+	status=$$(curl -s -o /dev/null -w '%{http_code}' http://localhost:18080/nonexistent); \
+	if [ "$$status" = "404" ]; then \
+		echo "PASS /nonexistent (404)"; pass=$$((pass + 1)); \
+	else \
+		echo "FAIL /nonexistent (expected 404, got $$status)"; fail=$$((fail + 1)); \
+	fi; \
+	echo ""; \
+	echo "$$pass/6 server tests passed"; \
+	kill $$SERVER_PID 2>/dev/null; wait $$SERVER_PID 2>/dev/null; \
+	trap - EXIT; \
+	if [ $$fail -gt 0 ]; then exit 1; fi
 
 define make_test_rule
 test-$(1):
