@@ -5,16 +5,18 @@ function getName(first, last) {
 
 BEGIN {
     count = 0
-    marker = 9999
+    DUPLICATE_THRESHOLD = 2
 }
 
 $1 !~ /FirstName/ {
-    if (names[getName($1, $2)] == marker) {
+    name = getName($1, $2)
+
+    names[name]++
+    if (names[name] == DUPLICATE_THRESHOLD) {
         count += 1
     }
-    names[getName($1, $2)] = marker
 }
 
 END {
-    printf("There are %d people out of %d with identical first and last names\n", count, NR)
+    printf("There are %d people out of %d with identical first and last names\n", count, (NR - 1))
 }
